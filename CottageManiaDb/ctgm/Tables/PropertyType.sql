@@ -1,0 +1,7 @@
+﻿CREATE TABLE [ctgm].[PropertyType] (
+    [Id]   UNIQUEIDENTIFIER NOT NULL,
+    [Name] VARCHAR (20)     NOT NULL,
+    CONSTRAINT [PK_PropertyType] PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [UK_PropertyType] UNIQUE NONCLUSTERED ([Name] ASC)
+);
+

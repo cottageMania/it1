@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="daeeabb2d4144046b3d66b2f0f4d8eb7" Name="Diagram1">
+        <EntityTypeShape EntityType="EntitiesModel.Address" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntitiesModel.Availability" Width="1.5" PointX="5.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntitiesModel.Picture" Width="1.5" PointX="1.5" PointY="23.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntitiesModel.PictureLibrary" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntitiesModel.PortalUser" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntitiesModel.Price" Width="1.5" PointX="5.25" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntitiesModel.PricingType" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntitiesModel.Property" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntitiesModel.PropertyType" Width="1.5" PointX="0.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntitiesModel.Province" Width="1.5" PointX="1.5" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntitiesModel.Region" Width="1.5" PointX="1.5" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntitiesModel.Region2Province" Width="1.5" PointX="1.5" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntitiesModel.Reservation" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
+        <AssociationConnector Association="EntitiesModel.FK_Address_Region2Province" ManuallyRouted="false" />
+        <AssociationConnector Association="EntitiesModel.FK_Property_Address" ManuallyRouted="false" />
+        <AssociationConnector Association="EntitiesModel.FK_Availability_Property" ManuallyRouted="false" />
+        <AssociationConnector Association="EntitiesModel.FK_Availability_Reservation" ManuallyRouted="false" />
+        <AssociationConnector Association="EntitiesModel.FK_PictureLibrary_Picture" ManuallyRouted="false" />
+        <AssociationConnector Association="EntitiesModel.FK_Property_PictureLibrary" ManuallyRouted="false" />
+        <AssociationConnector Association="EntitiesModel.FK_Property_PortalUser" ManuallyRouted="false" />
+        <AssociationConnector Association="EntitiesModel.FK_Reservation_PortalUser" ManuallyRouted="false" />
+        <AssociationConnector Association="EntitiesModel.FK_Price_PricingType" ManuallyRouted="false" />
+        <AssociationConnector Association="EntitiesModel.FK_Price_Property" ManuallyRouted="false" />
+        <AssociationConnector Association="EntitiesModel.FK_Property_PropertyType" ManuallyRouted="false" />
+        <AssociationConnector Association="EntitiesModel.FK_Region2Province_Province" ManuallyRouted="false" />
+        <AssociationConnector Association="EntitiesModel.FK_Region2Province_Region" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="EntitiesModel.sysdiagram" Width="1.5" PointX="5.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

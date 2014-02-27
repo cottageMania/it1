@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [ctgm]
+    AUTHORIZATION [ctgm];
+

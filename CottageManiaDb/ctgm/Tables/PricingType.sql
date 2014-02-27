@@ -1,0 +1,7 @@
+﻿CREATE TABLE [ctgm].[PricingType] (
+    [Id]   UNIQUEIDENTIFIER NOT NULL,
+    [Name] VARCHAR (20)     NOT NULL,
+    CONSTRAINT [PK_PricingType] PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [UK_PricingType] UNIQUE NONCLUSTERED ([Name] ASC)
+);
+

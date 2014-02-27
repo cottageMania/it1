@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [ctgm]
+    WITH PASSWORD = N'Agaj=hjgfSarcwkzOivie{yomsFT7_&#$!~<,DrybcpUrxGi', SID = 0x3CCB1F1595CBA640A0300C22E464BD9F, DEFAULT_DATABASE = [cottageManiaDev], DEFAULT_LANGUAGE = [us_english], CHECK_POLICY = OFF;
+

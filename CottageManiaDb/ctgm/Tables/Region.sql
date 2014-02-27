@@ -1,0 +1,7 @@
+﻿CREATE TABLE [ctgm].[Region] (
+    [Id]   UNIQUEIDENTIFIER NOT NULL,
+    [Name] VARCHAR (30)     NOT NULL,
+    CONSTRAINT [PK_Region] PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [UK_Region] UNIQUE NONCLUSTERED ([Name] ASC)
+);
+
