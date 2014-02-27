@@ -7,13 +7,92 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CottageMania
-{
-
-
-    public partial class SiteMaster
-    {
-
+namespace CottageMania {
+    
+    
+    public partial class SiteMaster {
+        
+        /// <summary>
+        /// dsidxpressUnconditionalCss control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlLink dsidxpressUnconditionalCss;
+        
+        /// <summary>
+        /// dsidxwidgetsUnconditionalCss control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlLink dsidxwidgetsUnconditionalCss;
+        
+        /// <summary>
+        /// rsSettingsCss control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlLink rsSettingsCss;
+        
+        /// <summary>
+        /// rsCaptionsCss control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlLink rsCaptionsCss;
+        
+        /// <summary>
+        /// wpestateStyleCss control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlLink wpestateStyleCss;
+        
+        /// <summary>
+        /// wpestateMediaCss control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlLink wpestateMediaCss;
+        
+        /// <summary>
+        /// wpestateRobotoCss control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlLink wpestateRobotoCss;
+        
+        /// <summary>
+        /// demoCss control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlLink demoCss;
+        
+        /// <summary>
+        /// democolorpickerCss control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlLink democolorpickerCss;
+        
         /// <summary>
         /// HeadContent control.
         /// </summary>
@@ -22,16 +101,16 @@ namespace CottageMania
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadContent;
-
+        
         /// <summary>
-        /// FeaturedContent control.
+        /// SearchPlaceHolder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder FeaturedContent;
-
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder SearchPlaceHolder;
+        
         /// <summary>
         /// MainContent control.
         /// </summary>

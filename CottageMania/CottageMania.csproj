@@ -152,6 +152,7 @@
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="AddListing.aspx" />
     <Content Include="AddListing.html" />
+    <Content Include="AddNewListing.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -297,6 +298,7 @@
     <Content Include="NewProperty.aspx" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\51d3b6169ce2967fea00000d.js" />
     <Content Include="Scripts\AddListing.js" />
     <Content Include="Scripts\addressControl.js" />
     <Content Include="Scripts\analytics.js" />
@@ -305,7 +307,11 @@
     <Content Include="Scripts\commonmaputilmarker.js" />
     <Content Include="Scripts\control.js" />
     <Content Include="Scripts\controlsstats.js" />
+    <Content Include="Scripts\conversion.js" />
     <Content Include="Scripts\froogaloop.js" />
+    <Content Include="Scripts\full_screen_preview-f54e852657a7075d12599e708f141d1a.js" />
+    <Content Include="Scripts\ga.js" />
+    <Content Include="Scripts\goal.js" />
     <Content Include="Scripts\google_map_code.js" />
     <Content Include="Scripts\gumby.js" />
     <Content Include="Scripts\idx.js" />
@@ -329,8 +335,10 @@
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\modernizr.js" />
     <Content Include="Scripts\mydemo.js" />
+    <Content Include="Scripts\nr-100.js" />
     <Content Include="Scripts\onion.js" />
     <Content Include="Scripts\overlay.js" />
+    <Content Include="Scripts\vendor_webtrends-b4fcbcc02524cc097ffbc457710190aa.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
     <Content Include="Scripts\WebForms\GridView.js" />
@@ -352,6 +360,8 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\webtrends.js" />
+    <Content Include="Scripts\wtid.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -362,6 +372,7 @@
     <Content Include="Styles\css.css" />
     <Content Include="Styles\css_002.css" />
     <Content Include="Styles\demo.css" />
+    <Content Include="Styles\full_screen_preview-1.css" />
     <Content Include="Styles\jquery.liveSearch.css" />
     <Content Include="Styles\my_media.css" />
     <Content Include="Styles\settings.css" />
@@ -378,6 +389,13 @@
     </Compile>
     <Compile Include="AddListing.aspx.designer.cs">
       <DependentUpon>AddListing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewListing.aspx.cs">
+      <DependentUpon>AddNewListing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddNewListing.aspx.designer.cs">
+      <DependentUpon>AddNewListing.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
