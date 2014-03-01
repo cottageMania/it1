@@ -210,6 +210,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Default2.aspx" />
     <Content Include="Images\4723876257_d87b781986_b.jpg" />
     <Content Include="Images\4723876313_458cf044d8_b.jpg" />
     <Content Include="Images\4724527644_22526b12cc_b.jpg" />
@@ -456,6 +457,12 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default2.aspx.cs">
+      <DependentUpon>Default2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default2.aspx.designer.cs">
+      <DependentUpon>Default2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
