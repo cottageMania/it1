@@ -4489,7 +4489,7 @@ a:hover {
 }
 
 .header_social{
-    float:left;
+    float:right;
     margin-top:44px;
     margin-left: 25px;
     height:50px;
@@ -4500,14 +4500,14 @@ a:hover {
     margin-left: 10px;
     width: 20px;
     height: 20px;
-    background-image: url('../Assets/css/css-images/social.png');
+    background-image: url('../Images/social/social.png');
     background-position: 0px 0px;
     background-repeat: no-repeat;
     float: left;
 }
 
 .social_facebook:hover{
-    background-image: url('../Assets/css/css-images/social.png');
+    background-image: url('../Images/social/social.png');
     background-position: -20px 0px;
     background-repeat: no-repeat;
 }
@@ -4516,14 +4516,14 @@ a:hover {
     margin-left: 10px;
     width: 27px;
     height:20px;
-     background-image: url('../Assets/css/css-images/social.png');
+     background-image: url('../Images/social/social.png');
     background-position: -40px 0px;
     background-repeat: no-repeat;
     float: left;  
 }
 
 .social_tweet:hover{
-    background-image: url('../Assets/css/css-images/social.png');
+    background-image: url('../Images/social/social.png');
     background-position: -69px 0px;
     background-repeat: no-repeat;
 }
@@ -4533,14 +4533,14 @@ a:hover {
     margin-left: 10px;
     width: 26px;
     height:20px;
-    background-image: url('../Assets/css/css-images/social.png');
+    background-image: url('../Images/social/social.png');
     background-position: -96px 0px;
     background-repeat: no-repeat;
     float: left;
 }
 
 .social_google:hover{
-    background-image: url('../Assets/css/css-images/social.png');
+    background-image: url('../Images/social/social.png');
     background-position: -122px 0px;
     background-repeat: no-repeat;
 }
@@ -4550,14 +4550,14 @@ a:hover {
     margin-left: 7px;
     width: 26px;
     height:20px;
-    background-image: url('../Assets/css/css-images/social.png');
+    background-image: url('../Images/social/social.png');
     background-position: -142px 0px;
     background-repeat: no-repeat;
     float: left;
 }
 
 .social_pinterest:hover{
-    background-image: url('../Assets/css/css-images/social.png');
+    background-image: url('../Images/social/social.png');
     background-position: -166px 0px;
     background-repeat: no-repeat;
 }
@@ -7810,12 +7810,14 @@ input:-webkit-autofill {
     width: 100%;
 }
 
-.user_tab_menu{
-    border-bottom: 1px solid #45b37e;
+
+.user_tab_menu {
+    border-bottom: 1px solid #45B37E;
     float: left;
-    width: 100%;
     height: 42px;
+    margin-bottom: 22px;
     margin-top: 11px;
+    width: 100%;
 }
 
 .user_tab_menu a{
@@ -7957,10 +7959,10 @@ input:-webkit-autofill {
     width: 100%;
 }
 
-.add-estate p{
+/*.add-estate p{
     width:50%;
     float:left;
-}
+}*/
 
 .fullp{
      width:100%!important;
@@ -8050,11 +8052,14 @@ input:-webkit-autofill {
 
 
 
-#add-new-image{
-    background-color: #f7f7f7;
-    color:#1a171b;
-    padding: 9px 11px;
+
+#add-new-image {
+    background-color: #F7F7F7;
+    color: #1A171B;
     cursor: pointer;
+    float: left;
+    margin-bottom: 20px;
+    padding: 9px 11px;
 }
 
 .edit-images{
@@ -8984,4 +8989,101 @@ input:-webkit-autofill {
 #adv-search-4,
 #adv-search-header-4{
  pointer-events:  auto; 
+}
+
+
+
+
+
+
+.submit_container_header {
+    -moz-box-sizing: border-box;
+    background-color: #45B37E;
+    color: #FFFFFF;
+    float: left;
+    font-family: 'Roboto';
+    font-size: 16px;
+    padding: 10px 0 10px 20px;
+    width: 100%;
+}
+
+
+.submit_container {
+    -moz-box-sizing: border-box;
+    border: 1px solid #45B37E;
+    float: left;
+    margin-bottom: 20px;
+    padding: 16px 20px 0;
+    width: 100%;
+}
+.mobile {
+    display: none;
+}
+.full_form {
+    float: left;
+    width: 100%;
+}
+.half_form {
+    float: left;
+    width: 48%;
+}
+.half_form_last {
+    margin-left: 4%;
+}
+.half_form input[type="text"], .half_form input[type="password"], .half_form input[type="email"], .half_form input[type="url"], .half_form input[type="number"], .half_form textarea {
+    width: 96%;
+}
+.select-submit2 {
+    border: 1px solid #E5E5E5;
+    color: #1A171B;
+    font-size: 14px;
+    height: 40px;
+    margin: 0 0 10px;
+    padding: 9px;
+    width: 100% !important;
+}
+*::-moz-placeholder {
+    color: #1A171B;
+}
+
+.full_form-nob:last-of-type {
+    float: left;
+    margin-bottom: 11px;
+    width: 100%;
+}
+.full_form-nob {
+    margin-bottom: 0;
+}
+
+#prop_featured {
+    display: block;
+    float: left;
+    margin-right: 11px;
+    width: 14px;
+}
+#prop_featured_label {
+    width: 85%;
+}
+.featurescol input[type="checkbox"] {
+    display: block;
+    float: left;
+    margin: 5px 5px 0 0;
+    width: 20px;
+}
+.featurescol label {
+    width: auto;
+}
+
+
+#property_address {
+    height: 105px;
+}
+.add-estate .advanced_city_div {
+    margin-bottom: 0;
+}
+
+.add-estate .cd-dropdown {
+    float: left;
+    height: 40px;
+    width: 266px;
 }
