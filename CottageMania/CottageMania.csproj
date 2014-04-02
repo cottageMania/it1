@@ -296,7 +296,6 @@
     <Content Include="Images\WPEstate15213-980x777.jpg" />
     <Content Include="Images\WPEstate1903-980x777.jpg" />
     <Content Include="Images\WPEstateMourgueFile1013-980x777.jpg" />
-    <Content Include="NewProperty.aspx" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\51d3b6169ce2967fea00000d.js" />
@@ -322,8 +321,10 @@
     <Content Include="Scripts\jquery-migrate.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.dlmenu.js" />
     <Content Include="Scripts\jquery.js" />
     <Content Include="Scripts\jquery.liveSearch.js" />
+    <Content Include="Scripts\jquery.scrollTo.js" />
     <Content Include="Scripts\jquery_002.js" />
     <Content Include="Scripts\jquery_003.js" />
     <Content Include="Scripts\jquery_004.js" />
@@ -460,19 +461,13 @@
     </Compile>
     <Compile Include="Default2.aspx.cs">
       <DependentUpon>Default2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default2.aspx.designer.cs">
       <DependentUpon>Default2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="NewProperty.aspx.cs">
-      <DependentUpon>NewProperty.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="NewProperty.aspx.designer.cs">
-      <DependentUpon>NewProperty.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
