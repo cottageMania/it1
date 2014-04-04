@@ -2,6 +2,47 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <script type="text/javascript" src="Scripts/jquery.scrollTo.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-1.3.1.min.js"></script>
+  
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $('a.panel').click(function () {
+
+                $('a.panel').removeClass('selected');
+                $(this).addClass('selected');
+
+                current = $(this);
+
+                $('#wrapper').scrollTo($(this).attr('href'), 800);
+
+                return false;
+            });
+
+            $(window).resize(function () {
+                resizePanel();
+            });
+
+        });
+
+        function resizePanel() {
+
+            width = $(window).width();
+            height = $(window).height();
+
+            mask_width = width * $('.item').length;
+
+            $('#debug').html(width + ' ' + height + ' ' + mask_width);
+
+            $('#wrapper, .item').css({ width: width, height: height });
+            $('#mask').css({ width: mask_width, height: height });
+            $('#wrapper').scrollTo($('a.selected').attr('href'), 0);
+
+        }
+
+</script>
+
     <script type="text/javascript">
         function initialize() {
             var myLatlng = new google.maps.LatLng(61.18562, -111.26953);//-109.423828,60.196156,0.0 
@@ -60,54 +101,48 @@
 
 </script>
     <style type="text/css">
-        body {
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-        }
+      
 
-        #wrapper {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: #ccc;
-            overflow: hidden;
-        }
+   #wrapper {
+	width:100%;
+	height:100%;
+	
+	top:0;left:0;
+	background-color:#ccc;
+	overflow:hidden;
+}
 
-        #mask {
-            width: 500%;
-            height: 100%;
-            background-color: #eee;
-        }
+	#mask {
+		width:500%;
+		height:100%;
+		background-color:#eee;
+	}
 
-        .item {
-            width: 20%;
-            height: 100%;
-            float: left;
-            background-color: #ddd;
-        }
+	.item {
+		width:20%;
+		height:100%;
+		float:left;
+		background-color:#ddd;
+	}
+	
+	
+	.content {
+		width:400px;
+		height:300px;
+		top:20%;
+		margin:0 auto;
+		background-color:#aaa;
+		position:relative;
+	}
+	
+	.selected {
+		background:#fff;
+		font-weight:700;
+	}
 
-
-        .content {
-            width: 400px;
-            height: 300px;
-            top: 20%;
-            margin: 0 auto;
-            background-color: #aaa;
-            position: relative;
-        }
-
-        .selected {
-            background: #fff;
-            font-weight: 700;
-        }
-
-        .clear {
-            clear: both;
-        }
+	.clear {
+		clear:both;
+	}
     </style>
 </asp:Content>
 <asp:Content ID="phSearch" ContentPlaceHolderID="SearchPlaceHolder" runat="server">
@@ -192,9 +227,42 @@
     <!-- END SEARCH CODE -->
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-    <div id="mask">
-        <div id="item1" class="item">
-            <div class="content">item1 <a href="#item1" class="panel">1</a> | <a href="#item2" class="panel">2</a> </div>
+    <div id="wrapper" style="width: 1536px; height: 461px;">
+	<div id="mask" style="width: 7680px; height: 469px;">
+
+		<div class="item" id="item1" style="width: 1536px; height: 469px;">
+			
+			<a name="item1"></a>
+			<div class="content">item1 
+				<a class="panel" href="#item1">1</a> | 
+				<a class="panel" href="#item2">2</a> | 
+				<a class="panel" href="#item3">3</a> | 
+				<a class="panel" href="#item4">4</a> | 
+				<a class="panel" href="#item5">5</a>
+			</div>
+		</div>
+		
+		<div class="item" id="item2" style="width: 1536px; height: 469px;">
+			<a name="item2"></a>
+			<div class="content">item2 <a class="panel selected" href="#item1">back</a></div>
+		</div>
+		
+		<div class="item" id="item3" style="width: 1536px; height: 469px;">
+			<a name="item3"></a>
+			<div class="content">item3 <a class="panel" href="#item1">back</a></div>
+		</div>
+
+		<div class="item" id="item4" style="width: 1536px; height: 469px;">
+			<a name="item4"></a>
+			<div class="content">item4 <a class="panel" href="#item1">back</a></div>
+		</div>
+		
+		<div class="item" id="item5" style="width: 1536px; height: 469px;">
+			<a name="item5"></a>
+			<div class="content">item5 <a class="panel" href="#item1">back</a></div>
+		</div>
+         </div> </div>
+
             <div id="page">
                 <div style="height: 590px;" class="gmap_wrapper">
                     <div class="gmap-next is-front" id="gmap-next"></div>
@@ -376,13 +444,8 @@
                     <input name="submit" class="btn vernil small mobilesubmit" id="Submit1" value="Search" type="submit">
                 </form>
             </div>
-        </div>
-
-        <div id="item2" class="item">
-            <a name="item2"></a>
-            <div class="content">item2 <a href="#item1" class="panel">1</a> | <a href="#item2" class="panel">2</a> </div>
-        </div>
-    </div>
+       
+    </div> </div>
 </asp:Content>
 
 
