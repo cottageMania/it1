@@ -374,9 +374,14 @@
     <Content Include="Styles\css.css" />
     <Content Include="Styles\css_002.css" />
     <Content Include="Styles\demo.css" />
+    <Content Include="Styles\flexslider.css" />
     <Content Include="Styles\full_screen_preview-1.css" />
+    <Content Include="Styles\idxpro.css" />
+    <Content Include="Styles\ie9.css" />
+    <Content Include="Styles\jquery-ui.min.css" />
     <Content Include="Styles\jquery.liveSearch.css" />
     <Content Include="Styles\my_media.css" />
+    <Content Include="Styles\prettyphoto.css" />
     <Content Include="Styles\settings.css" />
     <Content Include="Styles\style.css" />
     <Content Include="Web.config">

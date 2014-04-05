@@ -1,0 +1,14 @@
+.is_last{
+width:219px;
+}
+
+.twoprop{
+    width:129px;
+}
+.prev_prop a{
+    width:64px;
+}
+
+.related_posts li:last-child {
+    max-width: 221px;
+}

@@ -82,30 +82,6 @@
 }
 
 @media only screen and (max-width: 959px){
-    
-    /*user dashboard css*/
-    
-    #profile_pass, 
-    #profile_message,
-    #profile-div,
-    #upload-container{
-    margin-left: 5px;    
-    }
-    
-    
-    .user_tab_menu{
-        height:auto;
-    }
-    
-    .user_tab_menu a {
-        width: 49%;
-        height: 43px;
-        float: left;
-        margin: 1px;
-        display: block;
-        box-sizing: border-box;
-    }
-
     #search_map_button,
     #advanced_search_map_button,
     #adv-search-2,
@@ -223,7 +199,7 @@
     }
     
     .gmap_wrapper{
-        
+        height: 590px;
     }
     
     .gmap-menu-wrapper{
@@ -1701,10 +1677,6 @@
 
 @media only screen and (max-width: 525px){
   
-    .add-estate p{
-        width:100%;
-    }
-    
     .fullinfo .agent_listing_details {
         margin: 50px 0px 0px 10px;
     }

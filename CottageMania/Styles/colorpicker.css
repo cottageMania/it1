@@ -1,4 +1,17 @@
 
+/* =MailChimp
+----------------------------------------------- */
+
+#mc_embed_signup,
+.indicates-required,
+.mc-field-group,
+.mce-responses,
+.response,
+#mce-responses .clear{
+    display:block!important;
+}
+/* Patterns admin
+/////////////////////////////////////////////////////////////////////////////////////*/
 
 
 .colorpicker {
@@ -6,7 +19,7 @@
     height: 176px;
     overflow: hidden; 
     position: absolute;
-    background: url(../Assets/css-images/colorpicker_background.png);
+    background: url(css-images/colorpicker_background.png);
     font-family: Arial, Helvetica, sans-serif;
     display: none;
     
@@ -29,7 +42,7 @@
     left: 0;
     width: 150px;
     height: 150px;
-    background: url(../Assets/css-images/colorpicker_overlay.png);
+    background: url(css-images/colorpicker_overlay.png);
 }
 
 .colorpicker_color div div {
@@ -39,7 +52,7 @@
     width: 11px;
     height: 11px;
     overflow: hidden;
-    background: url(../Assets/css-images/colorpicker_select.gif);
+    background: url(css-images/colorpicker_select.gif);
     margin: -5px 0 0 -5px;
 }
 
@@ -69,7 +82,7 @@
 
     overflow: hidden;
 
-    background: url(../Assets/css-images/colorpicker_indic.gif) left top;
+    background: url(css-images/colorpicker_indic.gif) left top;
 
     margin: -4px 0 0 0;
 
@@ -145,7 +158,7 @@
 
     height: 22px;
 
-    background: url(../Assets/css-images/colorpicker_hex.png) top;
+    background: url(css-images/colorpicker_hex.png) top;
 
     left: 212px;
 
@@ -191,7 +204,7 @@
 
 .colorpicker_rgb_r {
 
-    background-image: url(../Assets/css-images/colorpicker_rgb_r.png);
+    background-image: url(css-images/colorpicker_rgb_r.png);
 
     top: 52px;
 
@@ -201,7 +214,7 @@
 
 .colorpicker_rgb_g {
 
-    background-image: url(../Assets/css-images/colorpicker_rgb_g.png);
+    background-image: url(css-images/colorpicker_rgb_g.png);
 
     top: 82px;
 
@@ -211,7 +224,7 @@
 
 .colorpicker_rgb_b {
 
-    background-image: url(../Assets/css-images/colorpicker_rgb_b.png);
+    background-image: url(css-images/colorpicker_rgb_b.png);
 
     top: 112px;
 
@@ -221,7 +234,7 @@
 
 .colorpicker_hsb_h {
 
-    background-image: url(../Assets/css-images/colorpicker_hsb_h.png);
+    background-image: url(css-images/colorpicker_hsb_h.png);
 
     top: 52px;
 
@@ -231,7 +244,7 @@
 
 .colorpicker_hsb_s {
 
-    background-image: url(../Assets/css-images/colorpicker_hsb_s.png);
+    background-image: url(css-images/colorpicker_hsb_s.png);
 
     top: 82px;
 
@@ -241,7 +254,7 @@
 
 .colorpicker_hsb_b {
 
-    background-image: url(../Assets/css-images/colorpicker_hsb_b.png);
+    background-image: url(css-images/colorpicker_hsb_b.png);
 
     top: 112px;
 
@@ -257,7 +270,7 @@
 
     height: 22px;
 
-    background: url(../Assets/css-images/colorpicker_submit.png) top;
+    background: url(css-images/colorpicker_submit.png) top;
 
     left: 322px;
 
@@ -304,7 +317,7 @@
     height: 176px;
     overflow: hidden;
     position: absolute;
-    background: url(../Assets/css-images/colorpicker_background.png);
+    background: url(css-images/colorpicker_background.png);
     font-family: Arial, Helvetica, sans-serif;
     display: none;
 }
@@ -324,7 +337,7 @@
     left: 0;
     width: 150px;
     height: 150px;
-    background: url(../Assets/css-images/colorpicker_overlay.png);
+    background: url(css-images/colorpicker_overlay.png);
 }
 .colorpicker_color div div {
     position: absolute;
@@ -333,7 +346,7 @@
     width: 11px;
     height: 11px;
     overflow: hidden;
-    background: url(../Assets/css-images/colorpicker_select.gif);
+    background: url(css-images/colorpicker_select.gif);
     margin: -5px 0 0 -5px;
 }
 .colorpicker_hue {
@@ -349,7 +362,7 @@
     width: 35px;
     height: 9px;
     overflow: hidden;
-    background: url(../Assets/css-images/colorpicker_indic.gif) left top;
+    background: url(css-images/colorpicker_indic.gif) left top;
     margin: -4px 0 0 0;
     left: 0px;
 }
@@ -387,7 +400,7 @@
     position: absolute;
     width: 72px;
     height: 22px;
-    background: url(../Assets/css-images/colorpicker_hex.png) top;
+    background: url(css-images/colorpicker_hex.png) top;
     left: 212px;
     top: 142px;
 }
@@ -410,32 +423,32 @@
     cursor: n-resize;
 }
 .colorpicker_rgb_r {
-    background-image: url(../Assets/css-images/colorpicker_rgb_r.png);
+    background-image: url(css-images/colorpicker_rgb_r.png);
     top: 52px;
     left: 212px;
 }
 .colorpicker_rgb_g {
-    background-image: url(../Assets/css-images/colorpicker_rgb_g.png);
+    background-image: url(css-images/colorpicker_rgb_g.png);
     top: 82px;
     left: 212px;
 }
 .colorpicker_rgb_b {
-    background-image: url(../Assets/css-images/colorpicker_rgb_b.png);
+    background-image: url(css-images/colorpicker_rgb_b.png);
     top: 112px;
     left: 212px;
 }
 .colorpicker_hsb_h {
-    background-image: url(../Assets/css-images/colorpicker_hsb_h.png);
+    background-image: url(css-images/colorpicker_hsb_h.png);
     top: 52px;
     left: 282px;
 }
 .colorpicker_hsb_s {
-    background-image: url(../Assets/css-images/colorpicker_hsb_s.png);
+    background-image: url(css-images/colorpicker_hsb_s.png);
     top: 82px;
     left: 282px;
 }
 .colorpicker_hsb_b {
-    background-image: url(../Assets/css-images/colorpicker_hsb_b.png);
+    background-image: url(css-images/colorpicker_hsb_b.png);
     top: 112px;
     left: 282px;
 }
@@ -443,7 +456,7 @@
     position: absolute;
     width: 22px;
     height: 22px;
-    background: url(../Assets/css-images/colorpicker_submit.png) top;
+    background: url(css-images/colorpicker_submit.png) top;
     left: 322px;
     top: 142px;
     overflow: hidden;
@@ -467,7 +480,7 @@
     width:36px;
 }
 .colorpickerHolder div{
-    background:transparent url(../Assets/css-images/select2.png) repeat scroll center center;
+    background:transparent url(css-images/select2.png) repeat scroll center center;
     height:28px;
     left:4px;
     top:4px;
@@ -475,6 +488,199 @@
 }
 #colorpickertable .inptxt{width:70px;}
 #colorpickertable .clp{width:250px;padding-left:15px;}
+
+
+
+
+/*=======================================================================
+
+    Tabs
+    
+ ========================================================================*/
+
+.tabs { 
+    display: block;
+    width:700px;
+    margin-top:30px;
+    border:1px solid #CCC;
+}
+
+.tabs ul {
+    margin: 0;
+    padding: 0;
+    height: 20px;
+    border-bottom: 1px solid #CCC;
+}
+
+.tabs li {
+    display: block;
+    width:200px;
+    padding: 0;
+    margin: 0 10px 0 0;
+    line-height: 30px;
+    float: left;
+    color: #999;
+    cursor: default;
+}
+
+.tabs li a {
+    display: block;
+    width: auto;
+    height: 29px;
+    padding: 0 9px;
+    line-height: 30px;
+    border: 1px solid #CCC;
+    margin: 0 -1px 0 0;
+    color: #05390a;
+    background: #5dbb73;
+    text-decoration: none;
+}
+
+.tabs li a:hover {
+    text-decoration: none;
+}
+
+.tabs li.active a {
+    height: 30px;
+    font-weight: bold;
+    background: #ebffef;
+    border-width: 1px 1px 0 1px;
+}
+
+.tabs div {
+    display: none;
+    padding: 20px 10px;
+}
+
+#googleMap > div{
+    display: block;
+} 
+
+#googleMap > div div{
+    display: block;
+} 
+/*  */
+
+#tabsys input[type="text"],#tabpat input[type="text"]{	
+    float: left;
+    display: inline;
+}
+
+#tabsys .colorpickerHolder,#tabpat .colorpickerHolder{
+    display: inline;
+    float:left;
+    padding:0px;
+
+}
+#tabsys .sqcolor,#tabpat .sqcolor{
+    display: block;
+    padding:0px;
+}
+
+/* 
+.tabs tabadmin {
+               display: none;
+padding: 20px 10px;
+       }
+*/	
+
+.tabs div.active {
+    display: block;
+}
+
+.tabs li:last-child {
+    margin-right: 0;
+}
+
+/**** Pretty Tab Styles ****/
+
+.pretty.tabs ul {
+    display: table;
+    width: 100%;
+    border: 1px solid #CCC;
+    background: #f7f7f7;
+
+
+}
+
+.pretty.tabs li {
+    display: table-cell;
+    float: none;
+    text-align: center;
+}
+
+.pretty.tabs li a {
+    padding: 0;
+    font-size: 14px;
+    height: 52px;
+    line-height: 52px;
+    color: #444;
+    border: none;
+    border-right: 1px solid #CCC;
+    font-weight: bold;
+    background: transparent;
+}
+
+.pretty.tabs li:last-child a {
+    border-right: none;
+}
+
+.pretty.tabs li.active a {
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    border: none;
+    background: #D74142; /* Old browsers */
+
+
+}
+
+.pretty.tabs ul li.active:first-child a {
+
+    margin-left: 0; 
+}
+
+.pretty.tabs ul li.active:last-child a {
+
+}
+
+.ie7 .pretty.tabs > ul { width: 100%; height: 51px; }
+.ie7 .pretty.tabs > ul li { display: block; float: left; margin: 0; }
+.ie7 .pretty.tabs > ul li a { padding: 0 20px; }
+
+
+
+/**** Pill Tabs ****/
+
+.pill.tabs { height: auto; }
+.pill.tabs li, .pill.tabs li, .pretty.pill.tabs li { float: none; height: auto; }
+.pill.tabs li a { display: block; width: auto; height: auto; padding: 15px 20px; line-height: 1; border: solid 0 #ccc; border-width: 1px 1px 0; margin: 0; color: #555; background: #eee; font-size: 15px; font-size: 1.5rem; }
+.pill.tabs li a.active { height: auto; margin: 0; border-width: 1px 0 0; background: #fff; }
+
+.pretty.pill.tabs { border-bottom: solid 1px #eee; height: auto; }
+.pretty.pill.tabs li a { padding: 15px 20px; border: none; border-left: 1px solid #eee; border-right: 1px solid #eee; border-top: 1px solid #eee; background: #fff; }
+.pretty.pill.tabs li a.active { border: none; background: #00a6fc; color: #fff; margin: 0; position: static; top: 0; height: auto; }
+.pretty.pill.tabs li.active:first-child a { margin: 0; }
+
+
+@media only screen and (max-width: 767px) {
+    .pretty.tabs ul {
+
+        overflow: hidden;
+    }
+
+    .pretty.tabs li a {
+        height: 36px;
+        line-height: 36px;
+        font-size: 14px;
+    }
+}
+
+/* Vertically Align Stuff */
+
+.valign { display: table; width: 100%; }
+
+.valign > div, .valign > article { display: table-cell; vertical-align: middle; }â€‹
 
 
 
