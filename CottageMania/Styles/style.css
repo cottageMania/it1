@@ -13,9 +13,9 @@ License URI:
 
 /* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
 -------------------------------------------------------------- */
-@import url('../Assets/css/prettyphoto.css');
-@import url('../Assets/css/flexslider.css');
-@import url('../Assets/css/idxpro.css');
+@import url('../Styles/prettyphoto.css');
+@import url('../Styles/flexslider.css');
+@import url('../Styles/idxpro.css');
 html, body, div, span, applet, object, iframe,.advanced_search_map
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,

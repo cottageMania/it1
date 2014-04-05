@@ -48,7 +48,7 @@ html[xmlns] .slides {display: block;}
 /* Direction Nav */
 .flex-direction-nav {height: 0;}
 .flex-direction-nav a {    
-    background-image: url('../css/css-images/slidearrow.png');
+    background-image: url('../Images/slidearrow.png');
     background-position: 0px 0px;
     background-repeat: no-repeat;
     opacity: 0.25;
@@ -66,7 +66,7 @@ html[xmlns] .slides {display: block;}
 }
 
 .flex-direction-nav .flex-next {
-    background-image: url('../css/css-images/slidearrow.png');
+    background-image: url('../Images/slidearrow.png');
     background-position: -80px 0px;
     background-repeat: no-repeat;
     opacity: 0.25;
