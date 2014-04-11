@@ -1,47 +1,47 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default2.aspx.cs" Inherits="CottageMania.Default2" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-    <script type="text/javascript" src="Scripts/jquery.scrollTo.js"></script>
     <script type="text/javascript" src="Scripts/jquery-1.3.1.min.js"></script>
+<script type="text/javascript" src="Scripts/jquery.scrollTo.js"></script>
 
-    <script type="text/javascript">
+<script>
 
-        $(document).ready(function () {
+    $(document).ready(function () {
 
-            $('a.panel').click(function () {
+        $('a.panel').click(function () {
 
-                $('a.panel').removeClass('selected');
-                $(this).addClass('selected');
+            $('a.panel').removeClass('selected');
+            $(this).addClass('selected');
 
-                current = $(this);
+            current = $(this);
 
-                $('#wrapper').scrollTo($(this).attr('href'), 800);
+            $('#wrapper').scrollTo($(this).attr('href'), 800);
 
-                return false;
-            });
-
-            $(window).resize(function () {
-                resizePanel();
-            });
-
+            return false;
         });
 
-        function resizePanel() {
+        $(window).resize(function () {
+            resizePanel();
+        });
 
-            width = $(window).width();
-            height = $(window).height();
+    });
 
-            mask_width = width * $('.item').length;
+    function resizePanel() {
 
-            $('#debug').html(width + ' ' + height + ' ' + mask_width);
+        width = $(window).width();
+        height = $(window).height();
 
-            $('#wrapper, .item').css({ width: width, height: height });
-            $('#mask').css({ width: mask_width, height: height });
-            $('#wrapper').scrollTo($('a.selected').attr('href'), 0);
+        mask_width = width * $('.item').length;
 
-        }
+        $('#debug').html(width + ' ' + height + ' ' + mask_width);
 
-    </script>
+        $('#wrapper, .item').css({ width: width, height: height });
+        $('#mask').css({ width: mask_width, height: height });
+        $('#wrapper').scrollTo($('a.selected').attr('href'), 0);
+
+    }
+
+</script>
 
     <script type="text/javascript">
         function initialize() {
