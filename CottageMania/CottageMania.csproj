@@ -209,9 +209,9 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
-    <Content Include="Default3.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Default2.aspx" />
+    <Content Include="Default3.aspx" />
     <Content Include="Images\4723876257_d87b781986_b.jpg" />
     <Content Include="Images\4723876313_458cf044d8_b.jpg" />
     <Content Include="Images\4724527644_22526b12cc_b.jpg" />
@@ -459,13 +459,6 @@
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AddressController.cs" />
-    <Compile Include="Default3.aspx.cs">
-      <DependentUpon>Default3.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default3.aspx.designer.cs">
-      <DependentUpon>Default3.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -479,6 +472,13 @@
     </Compile>
     <Compile Include="Default2.aspx.designer.cs">
       <DependentUpon>Default2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default3.aspx.cs">
+      <DependentUpon>Default3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default3.aspx.designer.cs">
+      <DependentUpon>Default3.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
