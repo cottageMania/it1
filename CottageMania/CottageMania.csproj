@@ -209,7 +209,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
-    <Content Include="Default.aspx" />
+    <Content Include="_Default.aspx" />
     <Content Include="Default2.aspx" />
     <Content Include="Default3.aspx" />
     <Content Include="Images\4723876257_d87b781986_b.jpg" />
@@ -459,12 +459,12 @@
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AddressController.cs" />
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="_Default.aspx.cs">
+      <DependentUpon>_Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="_Default.aspx.designer.cs">
+      <DependentUpon>_Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default2.aspx.cs">
       <DependentUpon>Default2.aspx</DependentUpon>

@@ -1,47 +1,48 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default2.aspx.cs" Inherits="CottageMania.Default2" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+    
     <script type="text/javascript" src="Scripts/jquery-1.3.1.min.js"></script>
-<script type="text/javascript" src="Scripts/jquery.scrollTo.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.scrollTo.js"></script>
+    <script>
 
-<script>
+        $(document).ready(function () {
 
-    $(document).ready(function () {
+            $('a.panel').click(function () {
 
-        $('a.panel').click(function () {
+                $('a.panel').removeClass('selected');
+                $(this).addClass('selected');
 
-            $('a.panel').removeClass('selected');
-            $(this).addClass('selected');
+                current = $(this);
 
-            current = $(this);
+                $('#wrapper').scrollTo($(this).attr('href'), 800);
 
-            $('#wrapper').scrollTo($(this).attr('href'), 800);
+                return false;
+            });
 
-            return false;
+            $(window).resize(function () {
+                resizePanel();
+            });
+
         });
 
-        $(window).resize(function () {
-            resizePanel();
-        });
+        function resizePanel() {
 
-    });
+            width = $(window).width();
+            height = $(window).height();
 
-    function resizePanel() {
+            mask_width = width * $('.item').length;
 
-        width = $(window).width();
-        height = $(window).height();
+            $('#debug').html(width + ' ' + height + ' ' + mask_width);
 
-        mask_width = width * $('.item').length;
+            $('#wrapper, .item').css({ width: width, height: height });
+            $('#mask').css({ width: mask_width, height: height });
+            $('#wrapper').scrollTo($('a.selected').attr('href'), 0);
 
-        $('#debug').html(width + ' ' + height + ' ' + mask_width);
-
-        $('#wrapper, .item').css({ width: width, height: height });
-        $('#mask').css({ width: mask_width, height: height });
-        $('#wrapper').scrollTo($('a.selected').attr('href'), 0);
-
-    }
+        }
 
 </script>
+
 
     <script type="text/javascript">
         function initialize() {
@@ -100,51 +101,10 @@
         }
 
     </script>
-    <style type="text/css">
-        #wrapper {
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background-color: #ccc;
-            overflow: hidden;
-        }
-
-        #mask {
-            width: 500%;
-            height: 100%;
-            background-color: #eee;
-        }
-
-        .item {
-            width: 20%;
-            height: 100%;
-            float: left;
-            background-color: #ddd;
-        }
-
-
-        .content {
-            width: 400px;
-            height: 300px;
-            top: 20%;
-            margin: 0 auto;
-            background-color: #aaa;
-            position: relative;
-        }
-
-        .selected {
-            background: #fff;
-            font-weight: 700;
-        }
-
-        .clear {
-            clear: both;
-        }
-    </style>
+   
 </asp:Content>
 <asp:Content ID="phSearch" ContentPlaceHolderID="SearchPlaceHolder" runat="server">
-    <!-- SEARCH CODE -->
+    <!-- SEARCH CODE 
     <div style="top: 112px;" class="search_wrapper" id="search_wrapper">
 
         <div class="search_holder" id="adv_search_holder">
@@ -219,90 +179,98 @@
                 </form>
             </div>
         </div>
-        <!-- end search holder-->
-    </div>
+        <!-- end search holder
+    </div>-->
     <!-- end search wrapper-->
     <!-- END SEARCH CODE -->
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-    <div id="wrapper" style="width: 1536px; height: 461px;">
-        <div id="mask" style="width: 4608px; height: 1407px;">
+    <div id="wrapper">
+        <div id="mask">
 
             <!-- first row -->
-            <div class="item" id="item1" style="width: 1536px; height: 469px;">
+            <div class="item" id="item1">
                 <a name="item1"></a>
                 <div class="content">
-                    item1  
-				<a class="panel" href="#item1">1</a> | 
-				<a class="panel" href="#item2">2</a> | 
-				<a class="panel" href="#item3">3</a> | 
-				<a class="panel" href="#item4">4</a> | 
-				<a class="panel" href="#item5">5</a> |
-                <a class="panel" href="#item6">6</a> | 
-				<a class="panel" href="#item7">7</a> | 
-				<a class="panel" href="#item8">8</a> | 
-				<a class="panel" href="#item9">9</a>
+                    None  
+				
                 </div>
             </div>
 
-            <div class="item" id="item2" style="width: 1536px; height: 469px;">
+            <div class="item" id="item2">
                 <a name="item2"></a>
                 <div class="content">
-                    item2 
-                <a class="panel" href="#item1">1</a> | 
-				<a class="panel" href="#item2">2</a> | 
-				<a class="panel" href="#item3">3</a> | 
-				<a class="panel" href="#item4">4</a> | 
-				<a class="panel" href="#item5">5</a> |
-                <a class="panel" href="#item6">6</a> | 
-				<a class="panel" href="#item7">7</a> | 
-				<a class="panel" href="#item8">8</a> | 
-				<a class="panel" href="#item9">9</a>
+                    <div class="main-content"> <h2>My Property List</h2>
+               <p>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+ Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+</p>
+                        <p>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+ Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="item" id="item3" style="width: 1536px; height: 469px;">
+            <div class="item" id="item3">
                 <a name="item3"></a>
                 <div class="content">
-                    item3 
-                <a class="panel" href="#item1">1</a> | 
-				<a class="panel" href="#item2">2</a> | 
-				<a class="panel" href="#item3">3</a> | 
-				<a class="panel" href="#item4">4</a> | 
-				<a class="panel" href="#item5">5</a> |
-                <a class="panel" href="#item6">6</a> | 
-				<a class="panel" href="#item7">7</a> | 
-				<a class="panel" href="#item8">8</a> | 
-				<a class="panel" href="#item9">9</a>
+                   
+                    <div class="main-content"> <h2>Add New Property form/Edit Property </h2>
+               <p>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+ Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+</p>
+                        <p>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+ Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+</p>
+                    </div>
+               
                 </div>
             </div>
 
             <div class="clear"></div>
 
             <!-- second row -->
-            <div id="item4" class="item" style="width: 1536px; height: 469px;">
+            <div id="item4" class="item">
                 <a name="item4"></a>
                 <div class="content">
-                    item4 
-                <a class="panel" href="#item1">1</a> | 
-				<a class="panel" href="#item2">2</a> | 
-				<a class="panel" href="#item3">3</a> | 
-				<a class="panel" href="#item4">4</a> | 
-				<a class="panel" href="#item5">5</a> |
-                <a class="panel" href="#item6">6</a> | 
-				<a class="panel" href="#item7">7</a> | 
-				<a class="panel" href="#item8">8</a> | 
-				<a class="panel" href="#item9">9</a>
+                   
+                    <div class="main-content"> <h2>User Profile</h2>
+               <p>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+ Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+</p>
+                        
+                    </div>
+               
                 </div>
             </div>
-            <div id="item5" class="item" style="width: 1536px; height: 469px;">
+            <div id="item5" class="item">
                 <a name="item5"></a>
                 <div class="content">
-                    item5 
+                   
+
+                   
                      <div id="page">
                     <div style="height: 590px;" class="gmap_wrapper">
                         <div class="gmap-next is-front" id="gmap-next"></div>
                         <div class="gmap-prev is-front" id="gmap-prev"></div>
+
+                         <div class="geolocation-button " id="geolocation-button"></div>
+                <div style="display: none;" id="tooltip-geolocation">place me on the map </div>
 
                         <div id="mobile-geolocation-button"></div>
 
@@ -409,80 +377,62 @@
                 <div id="advanced_search_map_button_mobile">
                     Advanced Search
                 </div>
-                <a class="panel" href="#item1">1</a> | 
-				<a class="panel" href="#item2">2</a> | 
-				<a class="panel" href="#item3">3</a> | 
-				<a class="panel" href="#item4">4</a> | 
-				<a class="panel" href="#item5">5</a> |
-                <a class="panel" href="#item6">6</a> | 
-				<a class="panel" href="#item7">7</a> | 
-				<a class="panel" href="#item8">8</a> | 
-				<a class="panel" href="#item9">9</a>
+                
                 </div>
             </div>
-            <div id="item6" class="item" style="width: 1536px; height: 469px;">
+            <div id="item6" class="item">
                 <a name="item6"></a>
                 <div class="content">
-                    item6 
-                <a class="panel" href="#item1">1</a> | 
-				<a class="panel" href="#item2">2</a> | 
-				<a class="panel" href="#item3">3</a> | 
-				<a class="panel" href="#item4">4</a> | 
-				<a class="panel" href="#item5">5</a> |
-                <a class="panel" href="#item6">6</a> | 
-				<a class="panel" href="#item7">7</a> | 
-				<a class="panel" href="#item8">8</a> | 
-				<a class="panel" href="#item9">9</a>
+                  
+                    <div class="main-content">  <h2>List Search Results view</h2> 
+               <p>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+ Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+</p>
+                        <p>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+ Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+</p>
+                    </div>
+               
                 </div>
             </div>
             <div class="clear"></div>
 
             <!-- third row -->
 
-            <div id="item7" class="item" style="width: 1536px; height: 469px;">
+            <div id="item7" class="item">
                 <a name="item7"></a>
                 <div class="content">
-                    item7 
-                <a class="panel" href="#item1">1</a> | 
-				<a class="panel" href="#item2">2</a> | 
-				<a class="panel" href="#item3">3</a> | 
-				<a class="panel" href="#item4">4</a> | 
-				<a class="panel" href="#item5">5</a> |
-                <a class="panel" href="#item6">6</a> | 
-				<a class="panel" href="#item7">7</a> | 
-				<a class="panel" href="#item8">8</a> | 
-				<a class="panel" href="#item9">9</a>
+                    
+              
                 </div>
             </div>
-            <div id="item8" class="item" style="width: 1536px; height: 469px;">
+            <div id="item8" class="item">
                 <a name="item8"></a>
                 <div class="content">
-                    item8 
-                <a class="panel" href="#item1">1</a> | 
-				<a class="panel" href="#item2">2</a> | 
-				<a class="panel" href="#item3">3</a> | 
-				<a class="panel" href="#item4">4</a> | 
-				<a class="panel" href="#item5">5</a> |
-                <a class="panel" href="#item6">6</a> | 
-				<a class="panel" href="#item7">7</a> | 
-				<a class="panel" href="#item8">8</a> | 
-				<a class="panel" href="#item9">9</a>
+                   
+                    <div class="main-content"> <h2>ProperyItem Details </h2>
+               <p>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+ Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+</p>
+                    </div>
+               
                 </div>
             </div>
 
-            <div id="item9" class="item" style="width: 1536px; height: 469px;">
+            <div id="item9" class="item">
                 <a name="item9"></a>
                 <div class="content">
-                    item9 
-                <a class="panel" href="#item1">1</a> | 
-				<a class="panel" href="#item2">2</a> | 
-				<a class="panel" href="#item3">3</a> | 
-				<a class="panel" href="#item4">4</a> | 
-				<a class="panel" href="#item5">5</a> |
-                <a class="panel" href="#item6">6</a> | 
-				<a class="panel" href="#item7">7</a> | 
-				<a class="panel" href="#item8">8</a> | 
-				<a class="panel" href="#item9">9</a>
+                   
+               
                 </div>
             </div>
 

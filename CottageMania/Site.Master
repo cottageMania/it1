@@ -30,6 +30,7 @@
     <script type="text/javascript" src="Scripts/jquery_007.js"></script>
     <script type="text/javascript" src="Scripts/modernizr.js"></script>
     <script type="text/javascript" src="Assets/js"></script>
+    
     <%--<script src="Assets/main.js" type="text/javascript"></script>--%>
     <script type="text/javascript" src="Scripts/comment-reply.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -42,6 +43,10 @@
     <meta name="generator" content="WordPress 3.6" />
     <link rel="canonical" href="http://wpestatetheme.org/" />
     <style type="text/css">
+
+         
+      
+    
         .ribbon-wrapper-under-offer {
             background-color: #c0392b;
         }
@@ -79,7 +84,7 @@
 <body class="home page page-id-3409 page-template-default">
    <form runat="server">
         <div id="body">
-             <div class="top-user-menu-wrapper">
+            <!-- <div class="top-user-menu-wrapper">
                         <div class="top-user-menu">
                             <div class="wellcome-user">
                                 <div id="user_logged_in" class="geohide">
@@ -93,7 +98,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
             <header id="branding" role="banner">
                 <div class="header_social">
                     <a href="https://www.facebook.com/" class="social_facebook"></a><a href="https://www.twitter.com/" class="social_tweet"></a><a href="http://google.org/" class="social_google"></a>
@@ -106,63 +111,27 @@
                     </div>
                    
                     <nav id="access" role="navigation">
-                        <div class="menu-main-menu-container">
-                            <ul id="menu-main-menu" class="menu">
-                                <li id="menu-item-3903" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-3903"><a href="Default.aspx">Home</a>
-                                    <ul class="sub-menu">
-                                        <li id="menu-item-3933" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3933"><a href="AddNewListing.aspx">Add New Listing</a></li>
-                                    </ul>
-                                </li>
-                                <li id="menu-item-3904" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3904"><a href="#">Properties</a>
-                                    <ul class="sub-menu">
-                                        <li id="menu-item-4687" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4687"><a href="http://wpestatetheme.org/properties-list/">Properties List</a></li>
-                                        <li id="menu-item-3905" class="menu-item menu-item-type-post_type menu-item-object-estate_property menu-item-3905"><a href="http://wpestatetheme.org/properties/3-bedroom-opportunity-brookly/">Single Property Page</a></li>
-                                        <li id="menu-item-4868" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4868 haschildren"><a href="http://wpestatetheme.org/listings-by-post-id/">Listings by Post ID</a>
-                                            <ul class="sub-menu">
-                                                <li id="menu-item-5131" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5131"><a href="http://wpestatetheme.org/listings-by-post-id-alternative-version/">Listings by ID – V2</a></li>
-                                            </ul>
-                                        </li>
-                                        <li id="menu-item-4943" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4943"><a href="http://wpestatetheme.org/listings-by-categories/">Listings by Categories</a></li>
-                                        <li id="menu-item-3954" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3954"><a href="http://wpestatetheme.org/featured-property/">Featured Property</a></li>
-                                        <li id="menu-item-3916" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3916 haschildren"><a href="#">Search by Type</a>
-                                            <ul class="sub-menu">
-                                                <li id="menu-item-3917" class="menu-item menu-item-type-taxonomy menu-item-object-property_category menu-item-3917"><a href="http://wpestatetheme.org/property_category/apartments/">Apartments</a></li>
-                                                <li id="menu-item-3918" class="menu-item menu-item-type-taxonomy menu-item-object-property_category menu-item-3918"><a href="http://wpestatetheme.org/property_category/land/">Land</a></li>
-                                                <li id="menu-item-3919" class="menu-item menu-item-type-taxonomy menu-item-object-property_category menu-item-3919"><a href="http://wpestatetheme.org/property_category/houses/">Houses</a></li>
-                                                <li id="menu-item-3920" class="menu-item menu-item-type-taxonomy menu-item-object-property_category menu-item-3920"><a href="http://wpestatetheme.org/property_category/offices/">Offices</a></li>
-                                                <li id="menu-item-3921" class="menu-item menu-item-type-taxonomy menu-item-object-property_category menu-item-3921"><a href="http://wpestatetheme.org/property_category/retail/">Retail</a></li>
-                                                <li id="menu-item-3922" class="menu-item menu-item-type-taxonomy menu-item-object-property_category menu-item-3922"><a href="http://wpestatetheme.org/property_category/industrial/">Industrial</a></li>
-                                            </ul>
-                                        </li>
-                                        <li id="menu-item-3909" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3909 haschildren"><a href="#">Search by Area</a>
-                                            <ul class="sub-menu">
-                                                <li id="menu-item-3910" class="menu-item menu-item-type-taxonomy menu-item-object-property_area menu-item-3910"><a href="http://wpestatetheme.org/property_area/east-harlem/">East Harlem</a></li>
-                                                <li id="menu-item-3911" class="menu-item menu-item-type-taxonomy menu-item-object-property_area menu-item-3911"><a href="http://wpestatetheme.org/property_area/manhattan/">Manhattan</a></li>
-                                                <li id="menu-item-3912" class="menu-item menu-item-type-taxonomy menu-item-object-property_area menu-item-3912"><a href="http://wpestatetheme.org/property_area/northern-brooklyn/">Northern Brooklyn</a></li>
-                                                <li id="menu-item-3913" class="menu-item menu-item-type-taxonomy menu-item-object-property_area menu-item-3913"><a href="http://wpestatetheme.org/property_area/queens/">Queens</a></li>
-                                                <li id="menu-item-3914" class="menu-item menu-item-type-taxonomy menu-item-object-property_area menu-item-3914"><a href="http://wpestatetheme.org/property_area/upper-east-side/">Upper East Side</a></li>
-                                                <li id="menu-item-3915" class="menu-item menu-item-type-taxonomy menu-item-object-property_area menu-item-3915"><a href="http://wpestatetheme.org/property_area/west-side/">West Side</a></li>
-                                            </ul>
-                                        </li>
-                                        <li id="menu-item-3906" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3906 haschildren"><a href="#">Search by City</a>
-                                            <ul class="sub-menu">
-                                                <li id="menu-item-3907" class="menu-item menu-item-type-taxonomy menu-item-object-property_city menu-item-3907"><a href="http://wpestatetheme.org/property_city/new-york/">New York</a></li>
-                                                <li id="menu-item-3908" class="menu-item menu-item-type-taxonomy menu-item-object-property_city menu-item-3908"><a href="http://wpestatetheme.org/property_city/new-jersey/">New Jersey</a></li>
-                                            </ul>
-                                        </li>
-                                        <li id="menu-item-5120" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5120"><a href="http://wpestatetheme.org/property_action_category/sales/">Properties for Sale</a></li>
-                                        <li id="menu-item-5121" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5121"><a href="http://wpestatetheme.org/property_action_category/rentals/">Properties for Rent</a></li>
-                                    </ul>
-                                </li>
-                               
-                            </ul>
+                       
+                 <div class="menu-main-menu-container">        
+				<!-- <a class="panel" href="#item1">-</a> |  -->
+				<a class="panel" href="#item2">My Property List</a> | 
+				<a class="panel" href="#item3">Add New Listing</a> | 
+				<a class="panel" href="#item4">User Profile</a> | 
+				<a class="panel" href="#item5">Map View</a> |
+                <a class="panel" href="#item6">Listing View</a> | 
+				<!-- <a class="panel" href="#item7">-</a> |  -->
+				<a class="panel" href="#item8">Property Details</a> | 
+				<!-- <a class="panel" href="#item9">-</a> -->
+               
+
+                        
+                            
                         </div>
                     </nav>
                     <!-- #access -->
                 </div>
 
-                <div class="geolocation-button " id="geolocation-button"></div>
-                <div style="display: none;" id="tooltip-geolocation">place me on the map </div>
+               
                 <asp:ContentPlaceHolder runat="server" ID="SearchPlaceHolder" />
 
             </header>
@@ -170,16 +139,16 @@
                 <asp:ContentPlaceHolder runat="server" ID="MainContent" />
             </section>
         </div>
-        <footer id="colophon" role="contentinfo">
+         <!-- <footer id="colophon" role="contentinfo">
             <div class="footer_band"></div>
-            <!-- #footer-widget-area -->
+            
             <div id="site-generator">
                 Copyright 2014 | Cottage Mania. All Rights Reserved.
             <div class="footer_social">
                 <a href="https://www.facebook.com/" class="social_facebook"></a><a href="https://www.twitter.com/" class="social_tweet"></a><a href="http://google.org/" class="social_google"></a>
             </div>
             </div>
-        </footer>
+        </footer> -->
     </form> 
 </body>
 </html>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="CottageMania.Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="_Default.aspx.cs" Inherits="CottageMania.Default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
      <%-- <script src="Assets/commonmaputilmarker.js" charset="UTF-8" type="text/javascript"></script>--%>
     <%--<script src="Assets/onion.js" charset="UTF-8" type="text/javascript"></script>--%>
