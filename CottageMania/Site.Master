@@ -113,14 +113,14 @@
                     <nav id="access" role="navigation">
                        
                  <div class="menu-main-menu-container">        
-				<!-- <a class="panel" href="#item1">-</a> |  -->
-				<a class="panel" href="#item2">My Property List</a> | 
-				<a class="panel" href="#item3">Add New Listing</a> | 
-				<a class="panel" href="#item4">User Profile</a> | 
-				<a class="panel" href="#item5">Map View</a> |
-                <a class="panel" href="#item6">Listing View</a> | 
+				<!-- <a class="panel" href="#item1">-</a>   -->
+				<a class="panel" href="#item2">My Property List</a>  
+				<a class="panel" href="#item3">Add New Listing</a>  
+				<a class="panel profile" href="#item4">User Profile</a> 
+				<a class="panel maping" href="#item5">Map View</a> 
+                <a class="panel listing" href="#item6">Listing View</a> 
 				<!-- <a class="panel" href="#item7">-</a> |  -->
-				<a class="panel" href="#item8">Property Details</a> | 
+				<a class="panel" href="#item8">Property Details</a> 
 				<!-- <a class="panel" href="#item9">-</a> -->
                
 

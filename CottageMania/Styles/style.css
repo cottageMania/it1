@@ -13,9 +13,9 @@ License URI:
 
 /* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
 -------------------------------------------------------------- */
-@import url('../Styles/prettyphoto.css');
-@import url('../Styles/flexslider.css');
-@import url('../Styles/idxpro.css');
+@import url('prettyphoto.css');
+@import url('flexslider.css');
+@import url('idxpro.css');
 html, body, div, span, applet, object, iframe,.advanced_search_map
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -9129,9 +9129,9 @@ input:-webkit-autofill {
         overflow:scroll;
         }
 
-        .selected {
-            background: #fff;
-            font-weight: 700;
+       #access a.selected {
+            font-weight: 800;
+            color: green;
         }
 
         .clear {
@@ -9162,3 +9162,29 @@ input:-webkit-autofill {
    #item8 .content {
       background-color: #7fd084;
   } 
+
+   #access a.panel.listing {
+       position:fixed;
+       right:40px;
+       top: 100px;
+       z-index:999000;
+       background-color: #45b37e;
+       padding: 6px;
+     }
+   #access a.panel.maping {
+       position:fixed;
+       right:40px;
+       top: 150px;
+       z-index:999000;
+       background-color: #e5e5e5;
+       padding: 6px;
+     }
+   #access a.panel.profile {
+       position:fixed;
+       left:40px;
+       top: 100px;
+       z-index:999000;
+       background-color: #d0d0d0;
+       padding: 6px;
+     }
+   
