@@ -209,9 +209,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
-    <Content Include="_Default.aspx" />
     <Content Include="Default2.aspx" />
-    <Content Include="Default3.aspx" />
     <Content Include="Images\4723876257_d87b781986_b.jpg" />
     <Content Include="Images\4723876313_458cf044d8_b.jpg" />
     <Content Include="Images\4724527644_22526b12cc_b.jpg" />
@@ -327,11 +325,11 @@
     <Content Include="Scripts\jquery.js" />
     <Content Include="Scripts\jquery.liveSearch.js" />
     <Content Include="Scripts\jquery.scrollTo.js" />
-    <Content Include="Scripts\jquery_002.js" />
+    <Content Include="Scripts\jquery.elastislide-1.1.0.js" />
     <Content Include="Scripts\jquery_003.js" />
     <Content Include="Scripts\jquery_004.js" />
-    <Content Include="Scripts\jquery_005.js" />
-    <Content Include="Scripts\jquery_006.js" />
+    <Content Include="Scripts\fitVids-1.0.js" />
+    <Content Include="Scripts\prettyPhoto-3.1.4.js" />
     <Content Include="Scripts\jquery_007.js" />
     <Content Include="Scripts\jquery_008.js" />
     <Content Include="Scripts\main.js" />
@@ -459,26 +457,12 @@
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AddressController.cs" />
-    <Compile Include="_Default.aspx.cs">
-      <DependentUpon>_Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="_Default.aspx.designer.cs">
-      <DependentUpon>_Default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Default2.aspx.cs">
       <DependentUpon>Default2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default2.aspx.designer.cs">
       <DependentUpon>Default2.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Default3.aspx.cs">
-      <DependentUpon>Default3.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default3.aspx.designer.cs">
-      <DependentUpon>Default3.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -536,7 +520,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49907</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49351/</IISUrl>
+          <IISUrl>http://localhost:49352/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

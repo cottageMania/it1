@@ -25,12 +25,19 @@
     <link rel="stylesheet" id="democolorpickerCss" href="Styles/colorpicker.css" type="text/css" media="all" />
 
     <script style="" src="Scripts/analytics.js" async=""></script>
+    <script type="text/javascript" src="Scripts/jquery.js"></script>
     <script type="text/javascript" src="Scripts/jquery_004.js"></script>
+    <script type="text/javascript" src="Scripts/fitVids-1.0.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.elastislide-1.1.0.js"></script>
+     <script type="text/javascript" src="Scripts/prettyPhoto-3.1.4.js"></script>
+    
+    <script style="" src="Scripts/analytics.js" async=""></script>
     <script type="text/javascript" src="Scripts/jquery-migrate.js"></script>
     <script type="text/javascript" src="Scripts/jquery_007.js"></script>
     <script type="text/javascript" src="Scripts/modernizr.js"></script>
+    <script type="text/javascript" src="Scripts/control.js"></script>
     <script type="text/javascript" src="Assets/js"></script>
-    
+
     <%--<script src="Assets/main.js" type="text/javascript"></script>--%>
     <script type="text/javascript" src="Scripts/comment-reply.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -43,10 +50,6 @@
     <meta name="generator" content="WordPress 3.6" />
     <link rel="canonical" href="http://wpestatetheme.org/" />
     <style type="text/css">
-
-         
-      
-    
         .ribbon-wrapper-under-offer {
             background-color: #c0392b;
         }
@@ -82,7 +85,7 @@
     <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
 </head>
 <body class="home page page-id-3409 page-template-default">
-   <form runat="server">
+    <form runat="server">
         <div id="body">
             <!-- <div class="top-user-menu-wrapper">
                         <div class="top-user-menu">
@@ -109,29 +112,30 @@
                             <img src="Images/Logo.png" alt="logo" />
                         </a>
                     </div>
-                   
+
                     <nav id="access" role="navigation">
-                       
-                 <div class="menu-main-menu-container">        
-				<!-- <a class="panel" href="#item1">-</a> |  -->
-				<a class="panel" href="#item2">My Property List</a> | 
+
+                        <div class="menu-main-menu-container">
+                            <!-- <a class="panel" href="#item1">-</a> |  -->
+                            <a class="panel" href="#item2">My Property List</a> | 
 				<a class="panel" href="#item3">Add New Listing</a> | 
 				<a class="panel" href="#item4">User Profile</a> | 
 				<a class="panel" href="#item5">Map View</a> |
                 <a class="panel" href="#item6">Listing View</a> | 
 				<!-- <a class="panel" href="#item7">-</a> |  -->
-				<a class="panel" href="#item8">Property Details</a> | 
+                            <a class="panel" href="javascript: show_login_form();return false;">Property Details</a> | 
+                <a class="panel" href="#">Properties</a> | 
 				<!-- <a class="panel" href="#item9">-</a> -->
-               
 
-                        
-                            
+
+
+
                         </div>
                     </nav>
                     <!-- #access -->
                 </div>
 
-               
+
                 <asp:ContentPlaceHolder runat="server" ID="SearchPlaceHolder" />
 
             </header>
@@ -139,7 +143,7 @@
                 <asp:ContentPlaceHolder runat="server" ID="MainContent" />
             </section>
         </div>
-         <!-- <footer id="colophon" role="contentinfo">
+        <!-- <footer id="colophon" role="contentinfo">
             <div class="footer_band"></div>
             
             <div id="site-generator">
@@ -149,6 +153,66 @@
             </div>
             </div>
         </footer> -->
-    </form> 
+        <div id="ajax_login_container">
+            <h5>You must be logged in to add listings to favorites.</h5>
+            <div id="closeadvancedlogin">x</div>
+            <div id="ajax_login_div">
+
+                <h2>Login here</h2>
+                <div id="login-div" class="login_form">
+                    <div id="login_message_area" class="loginalert"></div>
+
+                    <div class="row">
+                        <label for="username">Username</label>
+                        <input type="text" size="20" value="" id="login_user" name="log" class="text">
+                    </div>
+
+                    <div class="row">
+                        <label for="password">Password</label>
+                        <input type="password" size="20" id="login_pwd" name="pwd" class="text">
+                    </div>
+                    <input type="hidden" value="1" id="loginpop" name="loginpop">
+                    <input type="hidden" value="e36d8ca62a" name="security-login" id="security-login"><input type="hidden" value="/wp-admin/admin-ajax.php" name="_wp_http_referer">
+
+                    <input type="submit" class="btn vernil small" name="submit" id="wp-login-but" value="Login">
+
+                    <div class="login-links">
+                        <a id="reveal_register" href="#">Don't have an account? Register here!</a><div data-social="facebook" id="facebooklogin"></div>
+                        <div data-social="google" id="googlelogin"></div>
+                        <div data-social="yahoo" id="yahoologin"></div>
+                        <input type="hidden" value="9c4a35c308" name="security-register" id="security-register"><input type="hidden" value="/wp-admin/admin-ajax.php" name="_wp_http_referer">
+                    </div>
+                </div>
+            </div>
+
+            <div id="ajax_register_div">
+                <h2>Register</h2>
+
+                <div class="login_form">
+                    <div id="register_message_area" class="loginalert"></div>
+
+                    <div class="row">
+                        <label for="user_login">Username</label>
+                        <input type="text" size="20" value="" class="input" id="user_login_register" name="user_login_register">
+                    </div>
+                    <div class="row">
+                        <label for="user_email">Email</label>
+                        <input type="text" size="20" value="" class="input" id="user_email_register" name="user_email_register">
+                    </div>
+                    <p id="reg_passmail">A password will be e-mailed to you</p>
+
+                    <input type="hidden" value="9c4a35c308" name="security-register" id="security-register"><input type="hidden" value="/wp-admin/admin-ajax.php" name="_wp_http_referer">
+                    <p class="submit">
+                        <input type="submit" value="Register" class="btn vernil small" id="wp-submit-register" name="wp-submit"></p>
+
+                </div>
+
+
+                <div id="reveal_login" class="login-links"><a href="#">Already a member? Sign in!</a></div>
+                <a href="#"></a>
+            </div>
+            <a href="#"></a>
+        </div>
+    </form>
 </body>
 </html>

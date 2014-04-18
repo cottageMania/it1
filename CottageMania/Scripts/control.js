@@ -24,8 +24,8 @@ jQuery(window).resize(function() {
 
 jQuery(window).load(function() {
     "use strict";
-    jQuery('.sub-menu li').has('ul').addClass('haschildren');
-    if (!jQuery(".fullwhite")[0])  {
+    $('.sub-menu li').has('ul').addClass('haschildren');
+    if (!$W(".fullwhite")[0])  {
         if (!Modernizr.mq('only all and (max-width: 960px)')) {
             sizeContent();
         }
@@ -50,128 +50,10 @@ function sizeContent() {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 jQuery(document).ready(function($) {
      "use strict";
      $('#brsize').html($(window).width());
-     
-                   
-  ///////////////////////////////////////////////////////////////////////////////////////////  
-  ////////  Ajax add to favorites on listing
-  ////////////////////////////////////////////////////////////////////////////////////////////        
- 
-  $('.icon-fav').click(function(){
-       var  post_id         =  $(this).attr('data-postid'); 
-       var  securitypass    =  $('#security-pass').val();
-       var  ajaxurl         =  control_vars.admin_url+'admin-ajax.php'; 
-     
-       if (parseInt(control_vars.userid)===0){
-           show_login_form();
-       }else{
-            $(this).toggleClass('icon-fav-off');
-            $(this).toggleClass('icon-fav-on');
 
-            $.ajax({    
-             type: 'POST',
-             url: ajaxurl,
-             dataType: 'json',
-             data: {
-                 'action'            :   'ajax_add_fav',
-                 'post_id'           :   post_id,
-
-             },
-             success:function(data) {             
-                 if(data.added){
-                      $(this).removeClass('icon-fav-off').addClass('icon-fav-on');
-                 }else{
-                      $(this).removeClass('icon-fav-on').addClass('icon-fav-off');
-                 }
-             },
-             error: function(errorThrown){
-
-             }
-             });//end ajax
-      }// end login use
-    });
- 
-        
-                
-  ///////////////////////////////////////////////////////////////////////////////////////////  
-  ////////  Ajax add to favorites on propr
-  ////////////////////////////////////////////////////////////////////////////////////////////        
- 
-  $('#add_favorites').click(function(){
-       var  post_id         =  $('#add_favorites').attr('data-postid'); 
-       var  securitypass    =  $('#security-pass').val();
-       var  ajaxurl         =  control_vars.admin_url+'admin-ajax.php'; 
-  
-   
-    if (parseInt(control_vars.userid)===0){
-         show_login_form();
-    }else{
-        $('#add_favorites').text('saving..');
-        $.ajax({    
-        type: 'POST',
-        url: ajaxurl,
-        dataType: 'json',
-        data: {
-            'action'            :   'ajax_add_fav',
-            'post_id'           :   post_id,
-        
-        },
-        success:function(data) {
-
-            if(data.added){
-                 $('#add_favorites').text('favorite').removeClass('isnotfavorite').addClass('isfavorite');
-            }else{
-                 $('#add_favorites').text('add to favorites').removeClass('isfavorite').addClass('isnotfavorite');
-            }
-        },
-        error: function(errorThrown){
-     
-        }
-        }); //end ajax
-    }// end check login
-  });
- 
- 
-    function show_login_form(){
-      
-        var  ajaxurl         =  control_vars.admin_url+'admin-ajax.php'; 
-        $.ajax({    
-            type: 'POST',
-            url: ajaxurl,
-             data: {
-                'action'            :   'ajax_show_login_form',        
-             },
-            success:function(data) {
-          
-                 $('#page').append(data);
-                  enable_actions_modal();
-            },
-            error: function(errorThrown){
-   
-            }
-        }); //end ajax
-        
-    }
- 
- 
- 
- 
- 
  
      function enable_actions_modal(){
                 $('#closeadvancedlogin').click(function(){
@@ -218,212 +100,44 @@ jQuery(document).ready(function($) {
 
                  });
          
-     }   
+     }
+     enable_actions_modal();
+     //$('#closeadvancedlogin').click();
+
   ///////////////////////////////////////////////////////////////////////////////////////////  
   ////////  Ajax update password
   ////////////////////////////////////////////////////////////////////////////////////////////   
      
-      $('#change_pass').click(function(){
-       var  oldpass         =  $('#oldpass').val(); 
-       var  newpass         =  $('#newpass').val(); 
-       var  renewpass       =  $('#renewpass').val(); 
-       var  securitypass    =  $('#security-pass').val();
-       var  ajaxurl         =  control_vars.admin_url+'admin-ajax.php'; 
+    //  $('#change_pass').click(function(){
+    //   var  oldpass         =  $('#oldpass').val(); 
+    //   var  newpass         =  $('#newpass').val(); 
+    //   var  renewpass       =  $('#renewpass').val(); 
+    //   var  securitypass    =  $('#security-pass').val();
+    //   var  ajaxurl         =  control_vars.admin_url+'admin-ajax.php'; 
        
-        $.ajax({    
-        type: 'POST',
-        url: ajaxurl,
-        data: {
-            'action'            :   'ajax_update_pass',
-            'oldpass'           :   oldpass,
-            'newpass'           :   newpass,
-            'renewpass'         :   renewpass,   
-            'security-pass'     :   securitypass
-        },
+    //    $.ajax({    
+    //    type: 'POST',
+    //    url: ajaxurl,
+    //    data: {
+    //        'action'            :   'ajax_update_pass',
+    //        'oldpass'           :   oldpass,
+    //        'newpass'           :   newpass,
+    //        'renewpass'         :   renewpass,   
+    //        'security-pass'     :   securitypass
+    //    },
         
-        success:function(data) {
-           $('#profile_pass').append('<div class="login-alert">'+data+'<div>');
-           $('#oldpass,#newpass,#renewpass').val('');
+    //    success:function(data) {
+    //       $('#profile_pass').append('<div class="login-alert">'+data+'<div>');
+    //       $('#oldpass,#newpass,#renewpass').val('');
                   
-        },
-        error: function(errorThrown){
+    //    },
+    //    error: function(errorThrown){
      
-        }
-     }); 
-    });
+    //    }
+    // }); 
+    //});
        
-  ///////////////////////////////////////////////////////////////////////////////////////////  
-  ////////  update profile
-  ////////////////////////////////////////////////////////////////////////////////////////////   
-   
-   $('#update_profile').click(function(){
-       var  firstname       =  $('#firstname').val(); 
-       var  secondname      =  $('#secondname').val();
-       var  useremail       =  $('#useremail').val();
-       var  userphone       =  $('#userphone').val();
-       var  userskype       =  $('#userskype').val();
-       var  usertitle       =  $('#usertitle').val();
-       var  description     =  $('#userbio').val();
-       var  ajaxurl         =  control_vars.admin_url+'admin-ajax.php'; 
-       var  securityprofile =  $('#security-profile').val();
-       var  upload_picture  =  $('#upload_picture').val();
-   
-        $.ajax({    
-        type: 'POST',
-        url: ajaxurl,
-        data: {
-            'action'            :   'ajax_update_profile',
-            'firstname'         :   firstname, 
-            'secondname'        :   secondname, 
-            'useremail'         :   useremail, 
-            'userphone'         :   userphone, 
-            'userskype'         :   userskype, 
-            'usertitle'         :   usertitle, 
-            'description'       :   description, 
-            'upload_picture'    :   upload_picture,
-            'security-profile'  :   securityprofile
-        },
-        
-         success:function(data) {
-           $('#profile_message').append('<div class="login-alert">'+data+'<div>');                     
-        },
-        error: function(errorThrown){
 
-        }
-        });  
-   })
-   
-   function progressHandlingFunction(e){
-    if(e.lengthComputable){
-        $('#profile_message').attr({value:e.loaded,max:e.total});
-    }
-    }
-     
-   ///////////////////////////////////////////////////////////////////////////////////////////  
-  ////////  forgot pass  ajax
-  ////////////////////////////////////////////////////////////////////////////////////////////
-   $('#wp-forgot-but').click(function(){
-      wpestate_forgot();
-  });
-  
-  $('#forgot_email').keydown(function(e){
-      if(e.keyCode == 13){
-        e.preventDefault();
-         wpestate_forgot();
-      }
-     
-  });
-  
-  
-  
-    function wpestate_forgot(){
-       var  forgot_email          =  $('#forgot_email').val(); 
-       var  securityforgot        =  $('#security-forgot').val();
-       var  postid                =  $('#postid').val();
-       var  ajaxurl               =  control_vars.admin_url+'admin-ajax.php'; 
-   
-        $.ajax({    
-        type: 'POST',
-        url: ajaxurl,
-        data: {
-            'action'            :   'ajax_forgot_pass',
-            'forgot_email'      :   forgot_email, 
-            'security-login'    :   securityforgot,
-            'postid'            :   postid
-        },
-        
-        success:function(data) {
-           $('#forgot_email').val('');
-           $('#forgot_pass_area').empty().append('<div class="login-alert">'+data+'<div>');            
-        },
-        error: function(errorThrown){
-        }
-     });  
-    }
-    
-    
-        
-   ///////////////////////////////////////////////////////////////////////////////////////////  
-  ////////  login/forgot password  actions
-  ////////////////////////////////////////////////////////////////////////////////////////////  
-     
-     $('#forgot_pass').click(function(event){
-         event.preventDefault();
-         $("#login-div").hide();
-         $("#forgot-pass-div").show();
-      
-     })
-     
-     $('#return_login').click(function(event){
-         event.preventDefault();
-         $("#forgot-pass-div").hide();
-         $("#login-div").show();
-    
-     })
-     
-   ///////////////////////////////////////////////////////////////////////////////////////////  
-  ////////  login  ajax
-  ////////////////////////////////////////////////////////////////////////////////////////////
-   
-    $('#wp-login-but').click(function(){
-      wpestate_login();
-  });
-  
-  $('#login_pwd, #login_user').keydown(function(e){
-      if(e.keyCode == 13){
-        e.preventDefault();
-         wpestate_login();
-      }
-     
-  });
-  
-    function wpestate_login(){
-       var  login_user          =  $('#login_user').val(); 
-       var  login_pwd           =  $('#login_pwd').val(); 
-       var  security            =  $('#security-login').val();
-       var  ispop               =  $('#loginpop').val();
-       var  ajaxurl             =  control_vars.admin_url+'admin-ajax.php'; 
-
-       $('#login_message_area').empty().append('<div class="login-alert">'+control_vars.login_loading+'</div>');
-        $.ajax({    
-        type: 'POST',
-        dataType: 'json',
-        url: ajaxurl,
-        data: {
-            'action'            :   'ajax_loginx_form',
-            'login_user'        :   login_user,
-            'login_pwd'         :   login_pwd,
-            'ispop'             :   ispop,
-            'security-login'    :   security,
-        },
-        
-        success:function(data) {
-           $('#login_message_area').empty().append('<div class="login-alert">'+data.message+'<div>');
-                     
-                if (data.loggedin == true){
-                  
-                    if(parseInt(data.ispop) === 1){
-                        control_vars.userid=data.newuser;
-                        $('#ajax_login_container').remove();
-                    }else{
-                        document.location.href = control_vars.login_redirect;
-                    }
-                    
-                    $('#user_not_logged_in').hide();
-                    $('#user_logged_in').show();
-                    
-                }else{
-                    $('#login_user').val(''); 
-                    $('#login_pwd').val(''); 
-                }
-                
-        },
-        error: function(errorThrown){
-       
-        }
-     });  
-    }
-    
     
     
    ///////////////////////////////////////////////////////////////////////////////////////////  
@@ -623,154 +337,6 @@ jQuery(document).ready(function($) {
                   infoBox.close();
          }
      });
-    
-    
-     ///////////////////////////////////////////////////////////////////////////////////////
-     ////// Geolocation
-     /////////////////////////////////////////////////////////////////////////////////////////
-     
-     $("#geolocation-button").hover(
-            function () {
-              $('#tooltip-geolocation').fadeIn();
-              $('.tooltip').fadeOut("fast");
-            },
-            function () {
-              $('#tooltip-geolocation').fadeOut();
-            }
-        );
-     
-      ///////////////////////////////////////////////////////////////////////////////////////
-     ////// Zillow Estimate
-     /////////////////////////////////////////////////////////////////////////////////////////
-     /*
-     $('#zill_estimate_state,#zill_estimate_city,#zill_estimate_adr').click(function(){
-         $(this).val("");
-     })
-     */
-     
-    $('#zill_estimate_adr').focus(function(){
-         $(this).val(''); 
-    }).focusout(function(){
-        var value_field=$(this).val();
-        if (value_field===''){
-             $(this).val(control_vars.zillow_addres);
-        }
-    });
-    
-    
-    $('#zill_estimate_city').focus(function(){
-         $(this).val(''); 
-    }).focusout(function(){
-        var value_field=$(this).val();
-        if (value_field===''){
-             $(this).val(control_vars.zillow_city);
-        }
-    });
-    
-    
-    $('#zill_estimate_state').focus(function(){
-         $(this).val(''); 
-    }).focusout(function(){
-        var value_field=$(this).val();
-        if (value_field===''){
-             $(this).val(control_vars.zillow_state);
-        }
-    });
-   
-     /////////////////////////////////////////////////////////////////////////////////////////
-     ////// form upload
-     /////////////////////////////////////////////////////////////////////////////////////////
-       
-      $('#form_submit_2,#form_submit_1 ').click(function(){
-         window.scrollTo(0, 0);
-         $('#cover').fadeIn();
-         $('#upload_progress').fadeIn();
-          
-      });
-       
-       
-       $('#add-new-image').click(function(){
-           $('<p><label for="file">New Image:</label><input type="file" name="upload_attachment[]" id="file_featured"></p> ').appendTo('#files_area');
-       })
-       
-       
-       
-       $('.delete_image').click(function(){
-          var image_id=$(this).attr('data-imageid'); 
-          
-          var curent=$('#images_todelete').val(); 
-        if(curent===''){
-                 curent=image_id;
-           }else{
-                 curent=curent+','+image_id;
-           }
-         
-          $('#images_todelete').val(curent) ;     
-          $(this).parent().remove();              
-      });
-           
-  
-       
-/*  // code until v1.7
-     $('.checker').hover(function(){
-         var src = $(this).find('img').prop('src');  
-         src= src.replace('.png','hover.png');
-         $(this).find('img').attr('src',src);
-     },function(){
-         var src = $(this).find('img').prop('src');  
-         src= src.replace('hover.png','.png');
-         $(this).find('img').attr('src',src);
-     }) ;
-
-*/
-   var icons_array=control_vars.hovericons;
-   var hover_icons = jQuery.parseJSON(icons_array);
-   
-   var icons_array=control_vars.icons;
-   var normal_icons = jQuery.parseJSON(icons_array);
-   
-     $('.checker').hover(function(){
-         var imgicon    = $(this).find('img');
-         var iconname   = $(this).find('input').attr('id');
-         iconname=iconname.replace('_listing','');
-         iconname=iconname.replace('search_','');
-         imgicon.attr('src', hover_icons[iconname]);
-     },function(){
-         var imgicon    = $(this).find('img');
-         var iconname   = $(this).find('input').attr('id');
-         iconname=iconname.replace('_listing','');
-         iconname=iconname.replace('search_','');
-         imgicon.attr('src', normal_icons[iconname]);
-     }) ;
-
-     /////////////////////////////////////////////////////////////////////////////////////////
-     ////// mouse over map tooltip
-     /////////////////////////////////////////////////////////////////////////////////////////
-       
-
-        $('#googleMap').bind('mousemove', function(e){
-           $('.tooltip').css({'top':e.pageY,'left':e.pageX, 'z-index':'1'});
-        });
-        
-        setTimeout(function(){  $('.tooltip').fadeOut("fast");},10000)
-
-
-     /////////////////////////////////////////////////////////////////////////////////////////
-     ////// idx widget 
-     /////////////////////////////////////////////////////////////////////////////////////////
-     
-     $('.dsidx-controls a').click(function(){
-         sizeContent();         
-     });
-
-    ///////////////////////////////////////////////////////////////////////////////////////////
-    /////// Search widget
-    ///////////////////////////////////////////////////////////////////////////////////////////
-    $('#searchform input').focus(function(){
-       $(this).val(''); 
-    }).blur(function(){
-    
-    });
 
 
 
@@ -876,14 +442,6 @@ jQuery(document).ready(function($) {
              $(this).val(control_vars.contact_comment);
         }
     });
-
-
-
-
-
-
-
-
 
 
     ///////////////////////////////////////////////////////////////////////////////////////////
@@ -1105,30 +663,30 @@ jQuery(document).ready(function($) {
   
    
    
-    $( '#advanced_city' ).dropdown( {
-      gutter : 40                      
-    });
+    //$( '#advanced_city' ).dropdown( {
+    //  gutter : 40                      
+    //});
 
-    $( '#advanced_area' ).dropdown( {
-      gutter : 40                   
-    });
+    //$( '#advanced_area' ).dropdown( {
+    //  gutter : 40                   
+    //});
     
 
     ///////////////////////////////////////////////////////////////////////////////////////////
     /////// advanced search widget
     ///////////////////////////////////////////////////////////////////////////////////////////   
     
-    $( '#filter_search_action_sidebar' ).dropdown( {
-    });
+    //$( '#filter_search_action_sidebar' ).dropdown( {
+    //});
 
-    $( '#filter_search_type_sidebar' ).dropdown( {               
-    });
+    //$( '#filter_search_type_sidebar' ).dropdown( {               
+    //});
     
-    $( '#advanced_city_sidebar' ).dropdown( {
-    });
+    //$( '#advanced_city_sidebar' ).dropdown( {
+    //});
 
-    $( '#advanced_area_sidebar' ).dropdown( {
-    });
+    //$( '#advanced_area_sidebar' ).dropdown( {
+    //});
     
     
 
@@ -1136,73 +694,73 @@ jQuery(document).ready(function($) {
     /////// advanced search version 2
     ///////////////////////////////////////////////////////////////////////////////////////////    
     
-    $( '#advanced_city_2' ).dropdown({
-         gutter : 0,
-         stack : false   
-    });
+    //$( '#advanced_city_2' ).dropdown({
+    //     gutter : 0,
+    //     stack : false   
+    //});
 
-    $( '#advanced_area_2' ).dropdown( {
-        gutter : 0,
-        stack : false
-    });
+    //$( '#advanced_area_2' ).dropdown( {
+    //    gutter : 0,
+    //    stack : false
+    //});
     
-    $( '#adv_categ_2' ).dropdown( {
-       gutter : 0 ,
-       stack : false
-    });
+    //$( '#adv_categ_2' ).dropdown( {
+    //   gutter : 0 ,
+    //   stack : false
+    //});
     
-    $( '#adv_actions_2' ).dropdown( {
-        gutter : 0 ,
-        stack : false   
-    });
+    //$( '#adv_actions_2' ).dropdown( {
+    //    gutter : 0 ,
+    //    stack : false   
+    //});
     
     
     
-     $( '#advanced_city_2_internal' ).dropdown({
-         gutter : 42,
-         stack : false   
-    });
+    // $( '#advanced_city_2_internal' ).dropdown({
+    //     gutter : 42,
+    //     stack : false   
+    //});
 
-    $( '#advanced_area_2_internal' ).dropdown( {
-        gutter : 42,
-        stack : false
-    });
+    //$( '#advanced_area_2_internal' ).dropdown( {
+    //    gutter : 42,
+    //    stack : false
+    //});
     
-    $( '#adv_categ_2_internal' ).dropdown( {
-       gutter : 42 ,
-       stack : false
-    });
+    //$( '#adv_categ_2_internal' ).dropdown( {
+    //   gutter : 42 ,
+    //   stack : false
+    //});
     
-    $( '#adv_actions_2_internal' ).dropdown( {
-        gutter : 42 ,
-        stack : false   
-    });
-    
-    
+    //$( '#adv_actions_2_internal' ).dropdown( {
+    //    gutter : 42 ,
+    //    stack : false   
+    //});
     
     
     
     
     
-     $( '#advanced_city_2_mobile' ).dropdown({
-          gutter : 40,
-          stack : false   
-    });
+    
+    
+    // $( '#advanced_city_2_mobile' ).dropdown({
+    //      gutter : 40,
+    //      stack : false   
+    //});
 
-    $( '#advanced_area_2_mobile' ).dropdown( {
-        gutter : 40,
-        stack : false
-    });
+    //$( '#advanced_area_2_mobile' ).dropdown( {
+    //    gutter : 40,
+    //    stack : false
+    //});
     
-    $( '#adv_categ_2_mobile' ).dropdown( {
-       gutter : 40 ,
-       stack : false
-    });
+    //$( '#adv_categ_2_mobile' ).dropdown( {
+    //   gutter : 40 ,
+    //   stack : false
+    //});
     
-    $( '#adv_actions_2_mobile' ).dropdown( {
-        gutter : 40 ,
-        stack : false   
-    });
+    //$( '#adv_actions_2_mobile' ).dropdown( {
+    //    gutter : 40 ,
+    //    stack : false   
+    //});
     
 
     ///////////////////////////////////////////////////////////////////////////////////////////
@@ -1325,44 +883,6 @@ jQuery(document).ready(function($) {
         $(this).next(".toggle-content").slideToggle();
     });
 
-    ///////////////////////////////////////////////////////////////////////////////////////////
-    ///////   widget morgage calculator
-    ///////////////////////////////////////////////////////////////////////////////////////////
-    $('#morg_compute').click(function() {
-        
-        var intPayPer  = 0;
-        var intMthPay  = 0;
-        var intMthInt  = 0;
-        var intPerFin  = 0;
-        var intAmtFin  = 0;
-        var intIntRate = 0;
-        var intAnnCost = 0;
-        var intVal     = 0;
-        var salePrice  = 0;
-
-        salePrice = $('#sale_price').val();
-        intPerFin = $('#percent_down').val() / 100;
-
-        intAmtFin = salePrice - salePrice * intPerFin;
-        intPayPer =  parseInt ($('#term_years').val(),10) * 12;
-        intIntRate = parseInt ($('#interest_rate').val(),10);
-        intMthInt = intIntRate / (12 * 100);
-        intVal = raisePower(1 + intMthInt, -intPayPer);
-        intMthPay = intAmtFin * (intMthInt / (1 - intVal));
-        intAnnCost = intMthPay * 12;
-
-        $('#am_fin').html("<strong>"+control_vars.morg1+"</strong><br> " + (Math.round(intAmtFin * 100)) / 100 + " ");
-        $('#morgage_pay').html("<strong>"+control_vars.morg2+"</strong><br> " + (Math.round(intMthPay * 100)) / 100 + " ");
-        $('#anual_pay').html("<strong>"+control_vars.morg3+"</strong><br> " + (Math.round(intAnnCost * 100)) / 100 + " ");
-        $('#morg_results').show();
-        resize_post_morg(250);
-    });
-
-
-    function raisePower(x, y) {
-        return Math.pow(x, y);
-    }
-    
     
     ///////////////////////////////////////////////////////////////////////////////////////////
     ///////   custom-elastslider -single page top slider
