@@ -37,7 +37,7 @@
     <script type="text/javascript" src="Scripts/modernizr.js"></script>
     <script type="text/javascript" src="Scripts/control.js"></script>
     <script type="text/javascript" src="Assets/js"></script>
-
+    
     <%--<script src="Assets/main.js" type="text/javascript"></script>--%>
     <script type="text/javascript" src="Scripts/comment-reply.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -85,7 +85,7 @@
     <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
 </head>
 <body class="home page page-id-3409 page-template-default">
-    <form runat="server">
+   <form runat="server">
         <div id="body">
             <!-- <div class="top-user-menu-wrapper">
                         <div class="top-user-menu">
@@ -112,30 +112,30 @@
                             <img src="Images/Logo.png" alt="logo" />
                         </a>
                     </div>
-
+                   
                     <nav id="access" role="navigation">
-
-                        <div class="menu-main-menu-container">
-                            <!-- <a class="panel" href="#item1">-</a> |  -->
-                            <a class="panel" href="#item2">My Property List</a> | 
-				<a class="panel" href="#item3">Add New Listing</a> | 
-				<a class="panel" href="#item4">User Profile</a> | 
-				<a class="panel" href="#item5">Map View</a> |
-                <a class="panel" href="#item6">Listing View</a> | 
+                       
+                 <div class="menu-main-menu-container">        
+				<!-- <a class="panel" href="#item1">-</a>   -->
+				<a class="panel" href="#item2">My Property List</a>  
+				<a class="panel" href="#item3">Add New Listing</a>  
+				<a class="panel profile" href="#item4">User Profile</a> 
+				<a class="panel maping" href="#item5">Map View</a> 
+                <a class="panel listing" href="#item6">Listing View</a> 
 				<!-- <a class="panel" href="#item7">-</a> |  -->
                             <a class="panel" href="javascript: show_login_form();return false;">Property Details</a> | 
                 <a class="panel" href="#">Properties</a> | 
 				<!-- <a class="panel" href="#item9">-</a> -->
+               
 
-
-
-
+                        
+                            
                         </div>
                     </nav>
                     <!-- #access -->
                 </div>
 
-
+               
                 <asp:ContentPlaceHolder runat="server" ID="SearchPlaceHolder" />
 
             </header>
@@ -143,7 +143,7 @@
                 <asp:ContentPlaceHolder runat="server" ID="MainContent" />
             </section>
         </div>
-        <!-- <footer id="colophon" role="contentinfo">
+         <!-- <footer id="colophon" role="contentinfo">
             <div class="footer_band"></div>
             
             <div id="site-generator">
@@ -213,6 +213,6 @@
             </div>
             <a href="#"></a>
         </div>
-    </form>
+    </form> 
 </body>
 </html>
